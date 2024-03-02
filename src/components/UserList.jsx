@@ -2,6 +2,7 @@ import React from 'react';
 
 const UserList = ({ users, onUpdateUser, onDeleteUser }) => {
     const handleEdit = (user) => {
+        console.log(user,"user from handleEdit")
         onUpdateUser(user);
     };
 

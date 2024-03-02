@@ -17,8 +17,11 @@ const App = () => {
     setUsers([...users, { ...newUser, id: users.length + 1 }]);
   };
 
-  const updateUser = (updatedUser) => {
-    setUsers(users.map((user) => (user.id === updatedUser.id ? updatedUser : user)));
+  const updateUser = (updateduser) => {
+    console.log(updateduser,"updateduser")
+    const result = users.map((item) => (item.id === updateduser.id ? updateduser : item))
+    console.log(result)
+    setUsers(result);
   };
 
   const deleteUser = (userId) => {
